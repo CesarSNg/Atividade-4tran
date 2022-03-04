@@ -2,12 +2,11 @@ program logica1 !nome do programa (programa fonte logica1.f90)
 
 implicit none
 
-logical :: a,b,c, S !variáveis lógicas
+logical :: a,b, S !variáveis lógicas
 
 
 a = .true. !a = verdadeiro
 b = .true. !b = verdadeiro
-c = .false. !c = falso
 
 
 !CÁLCULOS PROPOSICIONAIS S = (~a ^ b) v (~a ^ ~b)
@@ -18,7 +17,7 @@ S = (.not.a.and.b).or.(.not.a.and..not.b)
 
 
 write(*,*)'valor logico das proposicoes simples'
-write(*,*) ' a = ', a, ' b = ', b, ' c = ',c
+write(*,*) ' a = ', a, ' b = ', b
 
 write(*,*)'valor logico da proposicao composta'
 write(*,*) ' S = (~a ^ b) v (~a ^ ~b) = ',S
@@ -31,7 +30,7 @@ open(10,file='teste.dat',status='replace') !abertura de arquivo teste.dat
 
 write(10,*)'valor logico das proposicoes simples'
 
-write(10,*) 'a = ', a,'b = ', b,'c = ', c
+write(10,*) 'a = ', a,'b = ', b
 
 write(10,*)'valor logico da proposicao composta'
 
